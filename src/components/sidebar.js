@@ -2,6 +2,7 @@ import { loadProjects, loadTasks } from '../utils/localStorage';
 import createProjectForm from '../components/projectForm';
 import createTaskForm from '../components/todoForm';
 import { TASKS_KEY } from '../utils/localStorage';
+import '../css/editTaskForm.css'
 
 
 const sidebar = document.createElement('nav');
@@ -63,25 +64,23 @@ listProjects();
 // Add buttons for adding project and task
 const btns = document.createElement('div');
 btns.classList.add('btns');
+
 const addProjectButton = document.createElement('button');
 addProjectButton.classList.add('add-project-btn');
 addProjectButton.innerText = 'Add Project';
 addProjectButton.addEventListener('click', () => {
-    document.querySelector('.add-project-btn').addEventListener('click', () => {
-        contentWrapper.innerHTML = '';
-        contentWrapper.appendChild(createProjectForm());
-    });
+    contentWrapper.innerHTML = '';
+    contentWrapper.appendChild(createProjectForm());
 });
 
 const addTaskButton = document.createElement('button');
 addTaskButton.classList.add('add-task-btn');
 addTaskButton.innerText = 'Add Task';
 addTaskButton.addEventListener('click', () => {
-    document.querySelector('.add-task-btn').addEventListener('click', () => {
-        contentWrapper.innerHTML = '';
-        contentWrapper.appendChild(createTaskForm());
-    });
+    contentWrapper.innerHTML = '';
+    contentWrapper.appendChild(createTaskForm());
 });
+
 
 btns.appendChild(addProjectButton);
 btns.appendChild(addTaskButton);
