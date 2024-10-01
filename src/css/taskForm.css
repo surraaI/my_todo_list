@@ -1,0 +1,126 @@
+/* Main form container styling */
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* Center the form */
+    padding: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-height: 90vh;
+    /* Prevent the form from becoming too tall */
+    overflow-y: auto;
+    /* Allow scrolling if the form becomes too long */
+}
+
+.form-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Input field styling */
+
+.input-field {
+    width: 100%;
+    /* Ensure the input fields don't exceed the form width */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+}
+
+.input-field:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+
+/* Textarea specific styling */
+
+.textarea {
+    min-height: 100px;
+    resize: vertical;
+    padding: 12px;
+    width: 100%;
+    /* Ensure textarea matches the width of input fields */
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
+}
+
+
+/* Submit button styling */
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    /* Make the button match the width of the form */
+    box-sizing: border-box;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.3);
+}
+
+
+/* Disabled button styling for better accessibility */
+
+.submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* Styling for the project label */
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+/* Add a bit of spacing between form elements */
+
+.form-container>* {
+    margin-bottom: 10px;
+}
+
+
+/* Responsive design for smaller screens */
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 90vw;
+        padding: 15px;
+    }
+    .input-field,
+    .textarea,
+    .submit-btn {
+        padding: 10px;
+    }
+}
