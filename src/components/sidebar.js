@@ -245,6 +245,22 @@ function handleRowClick(task, index) {
     form.appendChild(priorityLabel);
     form.appendChild(priorityInput);
 
+    // add project input
+    const projectLabel = document.createElement('label');
+    projectLabel.innerText = 'Project:';
+    const projectInput = document.createElement('select');
+    const projects = loadProjects();
+    projects.forEach(p => {
+        const option = document.createElement('option');
+        option.value = p.name;
+        option.innerText = p.name;
+        if (p.name === task.project) option.selected = true;
+        projectInput.appendChild(option);
+    });
+    form.appendChild(projectLabel);
+    form.appendChild(projectInput);
+
+
     // Completed checkbox
     const completedLabel = document.createElement('label');
     completedLabel.innerText = 'Completed:';
