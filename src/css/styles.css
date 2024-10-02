@@ -181,8 +181,8 @@ form {
 
 .projects-section {
     position: absolute;
-    left: 10px;
-    top: 100px;
+    left: 20px;
+    top: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,6 @@
 import Project from '../project';
 import { saveProject } from '../utils/localStorage';
+import { listProjects } from './sidebar';
 
 export default function createProjectForm() {
     // Create form container
@@ -39,6 +40,7 @@ export default function createProjectForm() {
         const newProject = new Project(title, description);
         // save the new task to local storage
         saveProject(newProject);
+        listProjects()
 
 
 

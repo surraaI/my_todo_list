@@ -40,7 +40,7 @@ export function listProjects() {
                 e.preventDefault();
                 const confirmed = confirm(`Are you sure you want to delete the project "${n.name}"?`);
                 if (confirmed) {
-                    deleteProject(n); // Call the delete function if confirmed
+                    deleteProject(n);
                 }
             });
 
@@ -86,7 +86,6 @@ btns.appendChild(addProjectButton);
 btns.appendChild(addTaskButton);
 sidebar.appendChild(btns);
 
-// 
 
 
 export default sidebar;
